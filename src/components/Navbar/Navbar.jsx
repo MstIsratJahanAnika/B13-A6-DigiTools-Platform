@@ -4,10 +4,12 @@ import { CiMenuFries } from 'react-icons/ci'
 const Navbar = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm px-40 py-6">
+            <div className="navbar bg-base-100 shadow-sm md:px-20 lg:px-40 py-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden"><CiMenuFries /></div>
+
+                        {/* dropdown content */}
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">

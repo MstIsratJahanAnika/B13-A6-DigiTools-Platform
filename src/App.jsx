@@ -4,6 +4,7 @@ import RatingSection from './components/heroSection/RatingSection'
 import Navbar from './components/Navbar/Navbar'
 import CardContainer from './components/UI/cardContainer/CardContainer'
 import DigitalToolsDescription from './components/UI/DigitalToolsDescription'
+import GetStarted from './components/UI/GetStarted'
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
 
       {/* card container, ekhane cards load hobe */}
       <CardContainer />
+
+      {/* get started section */}
+      <GetStarted />
     </>
   )
 }

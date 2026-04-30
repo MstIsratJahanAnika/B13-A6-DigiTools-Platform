@@ -4,6 +4,7 @@ import RatingSection from './components/heroSection/RatingSection'
 import Navbar from './components/Navbar/Navbar'
 import CardContainer from './components/UI/cardContainer/CardContainer'
 import DigitalToolsDescription from './components/UI/DigitalToolsDescription'
+import Footer from './components/UI/Footer'
 import GetStarted from './components/UI/GetStarted'
 import TransparentPricing from './components/UI/TransparentPricing'
 import WorkFlow from './components/UI/WorkFlow'
@@ -37,6 +38,7 @@ function App() {
       <WorkFlow />
 
       {/* footer section */}
+      <Footer />
     </>
   )
 }

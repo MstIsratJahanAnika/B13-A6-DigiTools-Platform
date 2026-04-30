@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import CardContainer from './components/UI/cardContainer/CardContainer'
 import DigitalToolsDescription from './components/UI/DigitalToolsDescription'
 import GetStarted from './components/UI/GetStarted'
+import TransparentPricing from './components/UI/TransparentPricing'
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
 
       {/* get started section */}
       <GetStarted />
+
+      {/* Transparent Pricing */}
+      <TransparentPricing />
     </>
   )
 }

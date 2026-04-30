@@ -3,7 +3,7 @@
 
 const TransparentPricing = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 justify-center mx-auto gap-[30px] px-10 lg:px-50 md:pr-30 py-30">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-center mx-auto gap-7.5 px-10 lg:px-50 md:pr-30 py-30">
             {/* 1st card */}
             <div className="card w-96 bg-[#F9FAFC] shadow-sm">
                 <div className="card-body">

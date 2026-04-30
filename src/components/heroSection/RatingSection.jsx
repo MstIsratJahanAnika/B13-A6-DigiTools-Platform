@@ -3,7 +3,7 @@
 const RatingSection = () => {
     return (
         <div className="px-50 py-15 bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
-    <div className="text-white flex flex-col md:flex-row md:justify-around space-y-4 
+            <div className="text-white flex flex-col md:flex-row md:justify-around space-y-4 
                     md:space-y-0 items-center divide-y md:divide-y-0 md:divide-x md:divide-white/50">
 
                 <div className="px-30">

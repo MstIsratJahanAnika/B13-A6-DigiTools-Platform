@@ -6,6 +6,7 @@ import CardContainer from './components/UI/cardContainer/CardContainer'
 import DigitalToolsDescription from './components/UI/DigitalToolsDescription'
 import GetStarted from './components/UI/GetStarted'
 import TransparentPricing from './components/UI/TransparentPricing'
+import WorkFlow from './components/UI/WorkFlow'
 
 function App() {
 
@@ -31,6 +32,11 @@ function App() {
 
       {/* Transparent Pricing */}
       <TransparentPricing />
+
+      {/* Transform WorkFlow */}
+      <WorkFlow />
+
+      {/* footer section */}
     </>
   )
 }

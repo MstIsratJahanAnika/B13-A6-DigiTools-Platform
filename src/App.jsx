@@ -41,7 +41,7 @@ function App() {
       </Suspense>
 
       {/* card container, ekhane cards load hobe */}
-      <CardContainer />
+      {/* <CardContainer /> */}
 
       {/* get started section */}
       <GetStarted />

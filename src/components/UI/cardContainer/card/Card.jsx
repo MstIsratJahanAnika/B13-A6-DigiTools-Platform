@@ -2,7 +2,7 @@
 
 import CardFeatures from "./CardFeatures";
 
-const Card = ({ toolCard, products, setProducts }) => {
+const Card = ({ toolCard, products, setProducts, addToCart, setAddToCart }) => {
 
     // from json data
     const {
@@ -14,6 +14,15 @@ const Card = ({ toolCard, products, setProducts }) => {
         icon,
         features
     } = toolCard;
+
+    const handleAddToCart = (toolCard) => {
+
+    setAddToCart(addToCart => {
+        const updated = [...addToCart, toolCard];
+        console.log("updated cart", updated);
+        return updated;
+    });
+};
 
     return (
         <div>
@@ -28,7 +37,7 @@ const Card = ({ toolCard, products, setProducts }) => {
 
                         {/* conditional rendering of badge */}
                         <span
-                            className={`badge badge-md rounded-4xl ${tag === "Best Seller" ? "bg-[#FEF3C6] text-[#BB4D00]" : tag === "Popular" ? "bg-[#E1E7FF] text-[#7769e0]": "bg-[#DBFCE7] text-[#0A883E]"}`}>
+                            className={`badge badge-md rounded-4xl ${tag === "Best Seller" ? "bg-[#FEF3C6] text-[#BB4D00]" : tag === "Popular" ? "bg-[#E1E7FF] text-[#7769e0]" : "bg-[#DBFCE7] text-[#0A883E]"}`}>
                             {tag}
                         </span>
                     </div>
@@ -44,7 +53,7 @@ const Card = ({ toolCard, products, setProducts }) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button className="btn px-4 py-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-4xl">Buy Now</button>
+                        <button onClick={() => handleAddToCart(toolCard)} className="btn px-4 py-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-4xl">Buy Now</button>
                     </div>
                 </div>
             </div>

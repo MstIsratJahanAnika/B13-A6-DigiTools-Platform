@@ -1,9 +1,8 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Hero from './components/heroSection/Hero'
 import RatingSection from './components/heroSection/RatingSection'
 import Navbar from './components/Navbar/Navbar'
-import CardContainer from './components/UI/cardContainer/CardContainer'
 import DigitalToolsDescription from './components/UI/DigitalToolsDescription'
 import Footer from './components/UI/Footer'
 import GetStarted from './components/UI/GetStarted'
@@ -23,10 +22,13 @@ function App() {
   // json data er promise
   const getToolCardsPromise = fetchToolCards();
 
+  // all tools theke card cart a add hobe
+      const [addToCart, setAddToCart] = useState([]);
+
   return (
     <>
       {/* navbar */}
-      <Navbar />
+      <Navbar addToCart={addToCart}/>
 
       {/* heroSection */}
       <Hero />
@@ -37,7 +39,7 @@ function App() {
       <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
 
       {/* Digital Tools Description Section */}
-      <DigitalToolsDescription getToolCardsPromise={getToolCardsPromise}/>
+      <DigitalToolsDescription getToolCardsPromise={getToolCardsPromise} addToCart={addToCart} setAddToCart={setAddToCart}/>
       </Suspense>
 
       {/* card container, ekhane cards load hobe */}

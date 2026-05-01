@@ -3,13 +3,16 @@
 import { use, useState } from "react";
 import CardContainer from "./cardContainer/CardContainer";
 
-const DigitalToolsDescription = ({ getToolCardsPromise }) => {
+const DigitalToolsDescription = ({ getToolCardsPromise, addToCart, setAddToCart }) => {
 
     const toolCards = use(getToolCardsPromise)
-    console.log(toolCards); //success
+    // console.log(toolCards); //success
 
     // card gula selected thakar khetre
     const [products, setProducts] = useState(true)
+
+    // all tools theke card cart a add hobe
+    // const [addToCart, setAddToCart] = useState([]);
 
     return (
         <div className="mt-30 mb-10 space-y-4 text-center">
@@ -32,7 +35,7 @@ const DigitalToolsDescription = ({ getToolCardsPromise }) => {
             </div>
 
             {/* Card container call hobe */}
-            <CardContainer toolCards={toolCards} products={products} setProducts={setProducts} />
+            <CardContainer toolCards={toolCards} products={products} setProducts={setProducts} addToCart={addToCart} setAddToCart={setAddToCart}/>
         </div>
     );
 };

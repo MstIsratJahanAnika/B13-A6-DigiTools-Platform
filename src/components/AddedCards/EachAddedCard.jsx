@@ -1,6 +1,6 @@
 // import React from 'react';
 
-const EachAddedCard = ({addToCard, addedCard, handleDeleteCart}) => {
+const EachAddedCard = ({addedCard, handleDeleteCart}) => {
     return (
         <div>
              <div className="p-4 md:p-5 bg-[#F9FAFC] flex flex-col sm:flex-row 

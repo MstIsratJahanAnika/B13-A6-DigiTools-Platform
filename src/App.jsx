@@ -8,10 +8,11 @@ import Footer from './components/UI/Footer'
 import GetStarted from './components/UI/GetStarted'
 import TransparentPricing from './components/UI/TransparentPricing'
 import WorkFlow from './components/UI/WorkFlow'
+import { ToastContainer } from 'react-toastify'
 
-const fetchToolCards =async()=>{
+const fetchToolCards = async () => {
   const res = await fetch('/public/data.json');
-  const jData =await res.json();
+  const jData = await res.json();
   // console.log(jData);//success
 
   return jData;
@@ -23,12 +24,12 @@ function App() {
   const getToolCardsPromise = fetchToolCards();
 
   // all tools theke card cart a add hobe
-      const [addToCart, setAddToCart] = useState([]);
+  const [addToCart, setAddToCart] = useState([]);
 
   return (
     <>
       {/* navbar */}
-      <Navbar addToCart={addToCart}/>
+      <Navbar addToCart={addToCart} />
 
       {/* heroSection */}
       <Hero />
@@ -36,10 +37,10 @@ function App() {
       {/* hero section er thik niche gradient part */}
       <RatingSection />
 
-      <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
+      <Suspense fallback={<div className="flex justify-center items-center min-h-screen"><span className="loading loading-spinner loading-xl"></span></div>}>
 
-      {/* Digital Tools Description Section */}
-      <DigitalToolsDescription getToolCardsPromise={getToolCardsPromise} addToCart={addToCart} setAddToCart={setAddToCart}/>
+        {/* Digital Tools Description Section */}
+        <DigitalToolsDescription getToolCardsPromise={getToolCardsPromise} addToCart={addToCart} setAddToCart={setAddToCart} />
       </Suspense>
 
       {/* card container, ekhane cards load hobe */}
@@ -56,6 +57,9 @@ function App() {
 
       {/* footer section */}
       <Footer />
+
+      {/* toastify */}
+      <ToastContainer />
     </>
   )
 }

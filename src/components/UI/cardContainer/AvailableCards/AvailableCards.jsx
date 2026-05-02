@@ -6,7 +6,7 @@ const AvailableCards = ({toolCards, products, setProducts, addToCart, setAddToCa
     
     return (
         <div>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 {
                     toolCards.map((toolCard) => {
                         // console.log(toolCard, 'toolcard'); //individual card pabo 

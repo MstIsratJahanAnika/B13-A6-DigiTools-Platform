@@ -1,6 +1,9 @@
 // import React from 'react';
 
+import { toast } from "react-toastify";
 import CardFeatures from "./CardFeatures";
+import { useState } from "react";
+import { FaRegCheckCircle } from "react-icons/fa";
 
 const Card = ({ toolCard, products, setProducts, addToCart, setAddToCart }) => {
 
@@ -15,19 +18,30 @@ const Card = ({ toolCard, products, setProducts, addToCart, setAddToCart }) => {
         features
     } = toolCard;
 
+    const [clicked, setClicked] = useState(false);
+
     const handleAddToCart = (toolCard) => {
+
 
         const isExists = addToCart.find(c => c.id === toolCard.id);
         if (isExists) {
-            alert('This card is already exists');
+            toast.error("Already in cart!");
             return;
         }
+
         // pervious card er shathe new card add
         setAddToCart(addToCart => {
             const updated = [...addToCart, toolCard];
             console.log("updated cart", updated);
             return updated;
         });
+        setClicked(true);
+
+
+        setTimeout(() => {
+            setClicked(false);
+        }, 1000);
+        toast.success("Added to cart successfully!");
 
 
     };
@@ -62,7 +76,7 @@ const Card = ({ toolCard, products, setProducts, addToCart, setAddToCart }) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button onClick={() => handleAddToCart(toolCard)} className="btn px-4 py-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-4xl">Buy Now</button>
+                        <button onClick={() => handleAddToCart(toolCard)} className={`btn px-4 py-3 text-white font-bold btn-block rounded-4xl transition-all duration-300 ${clicked? 'bg-green-500':'bg-linear-to-r from-[#4F39F6] to-[#9514FA]'} `}>{clicked? <span className="flex items-center gap-3"> <FaRegCheckCircle className="text-2xl"/>Added to Cart</span>: 'Buy Now'}</button>
                     </div>
                 </div>
             </div>

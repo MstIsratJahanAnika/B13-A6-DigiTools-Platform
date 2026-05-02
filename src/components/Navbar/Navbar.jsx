@@ -4,7 +4,7 @@ import { CiMenuFries } from 'react-icons/ci'
 const Navbar = ({ addToCart }) => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm md:px-20 lg:px-40 py-6">
+            <div className="navbar bg-base-100 shadow-sm container mx-auto px-4 md:px-6 lg:px-10 py-4">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden"><CiMenuFries /></div>
@@ -20,7 +20,7 @@ const Navbar = ({ addToCart }) => {
                             <li><a>FAQ</a></li>
                         </ul>
                     </div>
-                    <a className="text-5xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
+                    <a className="text-2xl md:text-3xl lg:text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">DigiTools</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-semibold">
@@ -31,7 +31,7 @@ const Navbar = ({ addToCart }) => {
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end gap-4">
+                <div className="navbar-end gap-2 md:gap-4">
 
                     {/* cart icon */}
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">

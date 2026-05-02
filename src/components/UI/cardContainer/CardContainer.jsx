@@ -23,11 +23,11 @@ const CardContainer = ({ toolCards, products, setProducts, addToCart, setAddToCa
         //card container a cards render hobe
 
         // dynamically dui ta conditionally show korbe - conditionally render
-        <div className="lg:mx-50 mx-10 mt-10 mb-30">
+        <div className="lg:mx-50 md:mx-20 mx-10 mt-10 mb-30">
             {
                 products? 
                     <AvailableCards toolCards={toolCards} products={products} setProducts={setProducts} addToCart={addToCart} setAddToCart={setAddToCart}/>
-                    : <AddedCards addToCart={addToCart} setAddToCart={setAddToCart} handleDeleteCart={handleDeleteCart}/>
+                    : <AddedCards addToCart={addToCart} setAddToCart={setAddToCart} handleDeleteCart={handleDeleteCart} products={products} setProducts={setProducts}/>
             }
         </div>
     );

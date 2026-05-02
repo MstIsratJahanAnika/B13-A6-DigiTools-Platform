@@ -2,7 +2,7 @@
 
 import EachAddedCard from "./EachAddedCard";
 
-const AddedCards = ({ addToCart, setAddToCart, handleDeleteCart }) => {
+const AddedCards = ({ addToCart, setAddToCart, handleDeleteCart}) => {
 
     if (addToCart.length === 0) {
         return (
@@ -17,6 +17,12 @@ const AddedCards = ({ addToCart, setAddToCart, handleDeleteCart }) => {
     const totalPrice = addToCart.reduce((previousPrice, currentItem) => {
         return previousPrice + currentItem.price;
     }, 0);
+
+
+    // proceed to checkout button handle
+    const handleClearAll = () => {
+        setAddToCart([]);
+    };
 
 
     return (
@@ -40,7 +46,7 @@ const AddedCards = ({ addToCart, setAddToCart, handleDeleteCart }) => {
             </div>
 
             {/* btn to delete all items from cart */}
-            <button className="btn px-4 py-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-4xl">
+            <button onClick={handleClearAll} className="btn px-4 py-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold btn-block rounded-4xl">
                 Proceed To Checkout
             </button>
         </div>

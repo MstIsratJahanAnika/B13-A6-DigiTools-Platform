@@ -2,10 +2,10 @@
 
 const GetStarted = () => {
     return (
-        <div className='bg-[#F9FAFC] lg:px-50 md:px-30 px-10 py-30'>
+        <div className='bg-[#F9FAFC] px-10 lg:px-50 md:mx-20 py-30 md:py-20'>
             <div>
                 <div className="text-center space-y-4 mb-10">
-                    <h2 className="text-5xl font-extrabold text-[#101727]">Get Started in 3 Steps</h2>
+                    <h2 className="lg:text-5xl text-3xl font-extrabold text-[#101727]">Get Started in 3 Steps</h2>
                     <p className="text-[#627382]">Start using premium digital tools in minutes, not hours.</p>
                 </div>
 
@@ -35,8 +35,8 @@ const GetStarted = () => {
                                 alt="" />
                         </span>
                         <div className="card-body text-center">
-                            <h2 className="text-2xl font-bold text-[#101727]">Create Account</h2>
-                            <p className="text-[#627382]">Sign up for free in seconds. No credit card required to get started.</p>                  
+                            <h2 className="text-2xl font-bold text-[#101727]">Choose Products</h2>
+                            <p className="text-[#627382]">Browse our catalog and select the tools that fit your needs.</p>                  
                         </div>
                     </div>
 
@@ -49,8 +49,8 @@ const GetStarted = () => {
                                 alt="" />
                         </span>
                         <div className="card-body text-center">
-                            <h2 className="text-2xl font-bold text-[#101727]">Create Account</h2>
-                            <p className="text-[#627382]">Sign up for free in seconds. No credit card required to get started.</p>                  
+                            <h2 className="text-2xl font-bold text-[#101727]">Start Creating</h2>
+                            <p className="text-[#627382]">Download and start using your premium tools immediately.</p>                  
                         </div>
                     </div>
                 </div>

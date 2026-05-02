@@ -12,7 +12,7 @@ const CardContainer = ({ toolCards, products, setProducts, addToCart, setAddToCa
         // dynamically dui ta conditionally show korbe
         <div className="lg:mx-50 mx-10 mt-10 mb-30">
             <AvailableCards toolCards={toolCards} products={products} setProducts={setProducts} addToCart={addToCart} setAddToCart={setAddToCart} />
-            <AddedCards />
+            <AddedCards addToCart={addToCart} setAddToCart={setAddToCart}/>
         </div>
     );
 };

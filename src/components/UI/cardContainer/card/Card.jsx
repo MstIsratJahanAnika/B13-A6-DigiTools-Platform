@@ -18,17 +18,20 @@ const Card = ({ toolCard, products, setProducts, addToCart, setAddToCart }) => {
     const handleAddToCart = (toolCard) => {
 
         const isExists = addToCart.find(c => c.id === toolCard.id);
-        if(isExists){
+        if (isExists) {
             alert('This card is already exists');
             return;
         }
-    // pervious card er shathe new card add
-    setAddToCart(addToCart => {
-        const updated = [...addToCart, toolCard];
-        console.log("updated cart", updated);
-        return updated;
-    });
-};
+        // pervious card er shathe new card add
+        setAddToCart(addToCart => {
+            const updated = [...addToCart, toolCard];
+            console.log("updated cart", updated);
+            return updated;
+        });
+
+
+    };
+
 
     return (
         <div>
@@ -64,6 +67,7 @@ const Card = ({ toolCard, products, setProducts, addToCart, setAddToCart }) => {
                 </div>
             </div>
         </div>
+
     );
 };
 

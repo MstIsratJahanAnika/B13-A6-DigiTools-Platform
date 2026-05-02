@@ -5,7 +5,7 @@ const TransparentPricing = () => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 justify-center mx-auto gap-7.5 px-10 lg:px-50 md:pr-30 py-30">
             {/* 1st card */}
-            <div className="card w-96 bg-[#F9FAFC] shadow-sm">
+            <div className="card bg-[#F9FAFC] shadow-sm">
                 <div className="card-body">
 
                     <h2 className="text-2xl font-bold text-[#001931]">Starter</h2>
@@ -36,7 +36,7 @@ const TransparentPricing = () => {
             </div>
 
             {/* 2nd card */}
-            <div className="card w-96 bg-linear-to-r from-[#4F39F6] to-[#9514FA] shadow-sm relative">
+            <div className="card bg-linear-to-r from-[#4F39F6] to-[#9514FA] shadow-sm relative">
                 <span className="badge badge-md rounded-4xl bg-[#FEF3C6] text-[#BB4D00] absolute left-1/2 -translate-x-1/2 -translate-y-1/2">Most Popular</span>
                 <div className="card-body text-white">
 
@@ -80,7 +80,7 @@ const TransparentPricing = () => {
             </div>
 
             {/* 3rd card */}
-            <div className="card w-96 bg-[#F9FAFC] shadow-sm">
+            <div className="card bg-[#F9FAFC] shadow-sm">
                 <div className="card-body">
 
                     <h2 className="text-2xl font-bold text-[#001931]">Enterprise</h2>

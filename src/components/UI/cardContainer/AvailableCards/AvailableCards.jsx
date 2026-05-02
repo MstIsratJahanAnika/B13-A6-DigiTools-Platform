@@ -2,6 +2,8 @@
 import Card from '../card/Card';
 
 const AvailableCards = ({toolCards, products, setProducts, addToCart, setAddToCart}) => {
+
+    
     return (
         <div>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">

@@ -4,6 +4,19 @@ import AddedCards from "../../AddedCards/AddedCards";
 import AvailableCards from "./AvailableCards/AvailableCards";
 
 const CardContainer = ({ toolCards, products, setProducts, addToCart, setAddToCart }) => {
+
+
+    // selected card delete from cart
+    const handleDeleteCart = (toolCard) => {
+
+        // je clicked sheta dekhabe na
+        const filterCard = addToCart.filter(deleteCard => deleteCard.id !== toolCard.id)
+        console.log(filterCard, 'filtered card');
+
+        // state update hobe setAddToCart diye
+        setAddToCart(filterCard);
+    }
+
     // console.log(toolCards, 'toolCards'); //success
     return (
 
@@ -14,7 +27,7 @@ const CardContainer = ({ toolCards, products, setProducts, addToCart, setAddToCa
             {
                 products? 
                     <AvailableCards toolCards={toolCards} products={products} setProducts={setProducts} addToCart={addToCart} setAddToCart={setAddToCart}/>
-                    : <AddedCards addToCart={addToCart} setAddToCart={setAddToCart}/>
+                    : <AddedCards addToCart={addToCart} setAddToCart={setAddToCart} handleDeleteCart={handleDeleteCart}/>
             }
         </div>
     );

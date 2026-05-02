@@ -1,6 +1,8 @@
 // import React from 'react';
 
-const AddedCards = ({ addToCart, setAddToCart }) => {
+import EachAddedCard from "./EachAddedCard";
+
+const AddedCards = ({ addToCart, setAddToCart, handleDeleteCart }) => {
 
     if (addToCart.length === 0) {
         return (
@@ -11,6 +13,12 @@ const AddedCards = ({ addToCart, setAddToCart }) => {
         );
     }
 
+    // total price count
+    const totalPrice = addToCart.reduce((previousPrice, currentItem) => {
+        return previousPrice + currentItem.price;
+    }, 0);
+
+
     return (
         <div className="p-10 border-2 border-[#F2F2F2] space-y-6 mt-10 rounded-3xl">
             <h3 className="text-2xl font-bold text-[#101727] flex items-start">Your Cart</h3>
@@ -19,19 +27,7 @@ const AddedCards = ({ addToCart, setAddToCart }) => {
                     <div key={addedCard.id}>
                         <div>
 
-                            <div className="p-5 bg-[#F9FAFC] flex items-center justify-between rounded-2xl">
-                                <div className="flex items-center gap-4">
-
-                                    <span className="border-2 border-[#F2F2F2] bg-white rounded-4xl">
-                                        <img className="p-3.5" src={addedCard.icon} alt="" />
-                                    </span>
-                                    <div className="space-y-2 flex flex-col items-start">
-                                        <h4 className="text-[#101727] text-xl font-semibold">{addedCard.name}</h4>
-                                        <p className="text-[#627382]">${addedCard.price}</p>
-                                    </div>
-                                </div>
-                                <button className="text-[#FF3980]">Remove</button>
-                            </div>
+                            <EachAddedCard addToCart={addToCart} addedCard={addedCard} handleDeleteCart={handleDeleteCart} />
                         </div>
                     </div>
                 ))
@@ -40,7 +36,7 @@ const AddedCards = ({ addToCart, setAddToCart }) => {
             {/* total price show */}
             <div className="flex justify-between items-center">
                 <p className="text-[#627382]">Total:</p>
-                <h4 className="text-2xl font-bold text-[#101727]">$78</h4>
+                <h4 className="text-2xl font-bold text-[#101727]">${totalPrice}</h4>
             </div>
 
             {/* btn to delete all items from cart */}

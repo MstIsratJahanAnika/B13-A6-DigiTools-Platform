@@ -1,16 +1,25 @@
-# React + Vite
+# Project Name: DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DigiTools Platform** is a modern web application where users can explore and purchase premium digital tools. It provides a clean UI to browse different tools, view their features, and add them to a cart. The project focuses on dynamic rendering, state management, props drilling, and a smooth user experience using **React**.
 
-Currently, two official plugins are available:
+## Technologies Used
+- React.js
+- Tailwind CSS
+- JavaScript(ES6)
+- DaisyUI
+- React Toastify
+- React Icons 
+- ImgBB
+- Fetch API(For JSON data)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Features of the Project
 
-## React Compiler
+### 1. Dynamically Products Rendering
+All tool cards are generated dynamically from a JSON data source.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Add to Cart & Deleting from Cart System
+Users can add Products to the cart, and selected items persist using React state. The cart updates in real-time with item count. Products can be remove from the cart all at a time or each at a time.
 
-## Expanding the ESLint configuration
+### 3. Conditional UI & Interactive Design
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Includes dynamic badges (Best Seller, Popular, New), dynamic features, toggle buttons (Products/Cart), and conditional rendering for a better user experience.
